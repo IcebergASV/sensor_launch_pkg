@@ -3,6 +3,7 @@ Launches MAVROS nodes for communicating with PixHawk.
 Model: HolyBro Pixhawk 6C
 -->
 <launch>
-<include file="$(find mavros)/launch/px4.launch"/>
+<include file="$(find mavros)/launch/apm.launch">
+<arg name="fcu_url" value="/dev/ttyTHS1:115200"/>
+</include>
  </launch>
-
